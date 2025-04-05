@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sutherland Designs | Handcrafted Home Decor</title>
+    <title>NOOGLO | Gift and Decor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -145,10 +145,8 @@
         }
 
         .logo p {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             color: var(--primary-color);
         }
 
@@ -157,7 +155,7 @@
         }
 
         nav ul li {
-            margin-left: 2rem;
+            margin: 0 1rem;
         }
 
         nav ul li a {
@@ -165,10 +163,6 @@
             font-weight: 500;
             padding: 0.5rem 0;
             position: relative;
-        }
-
-        nav ul li a:hover {
-            color: var(--primary-color);
         }
 
         nav ul li a:after {
@@ -179,86 +173,83 @@
             width: 0;
             height: 2px;
             background-color: var(--primary-color);
-            transition: width 0.3s;
+            transition: width 0.3s ease;
         }
 
-        nav ul li a:hover:after {
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
             width: 100%;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('your-kitchen-image.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('nooglo_one.png') no-repeat center center/cover;
+            color: #fff;
+            padding: 7rem 0;
+            margin-top: 4rem;
             text-align: center;
-            color: white;
-            margin-top: 0;
-            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
         .hero-content h1 {
             font-size: 3.5rem;
-            margin-bottom: 1.5rem;
             color: white;
-            font-weight: 600;
+            margin-bottom: 1rem;
         }
 
         .hero-content p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         /* Intro Section */
         .intro {
             padding: 5rem 0;
-            text-align: center;
-            background-color: white;
+            background-color: #fff;
         }
 
         .intro-text {
             max-width: 800px;
             margin: 0 auto;
+            text-align: center;
         }
 
-        .intro h2 {
+        .intro-text h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
         }
 
-        .intro p {
+        .intro-text p {
             font-size: 1.1rem;
-            color: #666;
         }
 
         /* Products Section */
         .products {
+            background-color: #f9f9f9;
             padding: 5rem 0;
-            background-color: var(--light-color);
         }
 
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .product-card {
-            background-color: white;
+            background-color: #fff;
             border-radius: 5px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
         }
 
         .product-image {
@@ -274,28 +265,27 @@
         }
 
         .product-card:hover .product-image img {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         .product-details {
             padding: 1.5rem;
-            text-align: center;
         }
 
         .product-details h3 {
-            margin-bottom: 0.8rem;
             font-size: 1.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .product-details p {
-            color: #666;
             margin-bottom: 1.5rem;
+            color: #666;
         }
 
         /* Story Section */
         .story {
             padding: 5rem 0;
-            background-color: white;
+            background-color: #fff;
         }
 
         .story-content {
@@ -307,46 +297,42 @@
 
         .story-image img {
             border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .story-text h2 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
         }
 
         .story-text p {
             font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 1.5rem;
         }
 
         /* CTA Section */
         .cta {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('nooglo_three.png') no-repeat center center/cover;
+            color: white;
             padding: 5rem 0;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('your-kitchen-image.jpg') no-repeat center center/cover;
-            color: white;
         }
 
         .cta h2 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
             color: white;
+            margin-bottom: 1rem;
         }
 
         .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 2rem;
         }
 
         /* Contact Section */
         .contact {
             padding: 5rem 0;
-            background-color: var(--light-color);
+            background-color: #f9f9f9;
         }
 
         .contact-content {
@@ -356,25 +342,30 @@
         }
 
         .contact-info {
-            padding-right: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 5px;
         }
 
         .info-item {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 1.5rem;
         }
 
         .info-item i {
             font-size: 1.5rem;
-            color: var(--primary-color);
             margin-right: 1rem;
-            margin-top: 0.2rem;
+        }
+
+        .info-item p {
+            margin: 0;
         }
 
         .social-links {
-            display: flex;
             margin-top: 2rem;
+            display: flex;
         }
 
         .social-links a {
@@ -383,23 +374,23 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background-color: var(--accent-color);
-            color: var(--secondary-color);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
             border-radius: 50%;
             margin-right: 1rem;
             transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: white;
+            color: var(--primary-color);
         }
 
         .contact-form {
             background-color: white;
             padding: 2rem;
             border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         .form-group {
@@ -409,7 +400,7 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
+            padding: 0.8rem;
             border: 1px solid #ddd;
             border-radius: 3px;
             font-family: var(--body-font);
@@ -424,16 +415,16 @@
 
         /* Footer */
         footer {
-            background-color: var(--secondary-color);
-            color: white;
+            background-color: var(--dark-color);
+            color: #fff;
             padding: 4rem 0 2rem;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
         }
 
         .footer-logo h2 {
@@ -555,12 +546,12 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <h1>SUTHERLAND</h1>
-                    <p>Handcrafted with love</p>
+                    <h1>NOOGLO</h1>
+                    <p>Gift and Decor</p>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="#story">Our Story</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -594,8 +585,7 @@
             <div class="product-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <!-- Replace with actual product image -->
-                        <img src="https://via.placeholder.com/400x400" alt="Custom Name Throw Pillow">
+                        <img src="nooglo_one.png" alt="Custom Name Throw Pillow">
                     </div>
                     <div class="product-details">
                         <h3>Custom Name Throw Pillow</h3>
@@ -606,8 +596,7 @@
                 
                 <div class="product-card">
                     <div class="product-image">
-                        <!-- Replace with actual product image -->
-                        <img src="https://via.placeholder.com/400x400" alt="Family Name Sign">
+                        <img src="nooglo_two.png" alt="Family Name Sign">
                     </div>
                     <div class="product-details">
                         <h3>Family Name Sign</h3>
@@ -618,12 +607,44 @@
                 
                 <div class="product-card">
                     <div class="product-image">
-                        <!-- Replace with actual product image -->
-                        <img src="https://via.placeholder.com/400x400" alt="Seasonal Throw Pillows">
+                        <img src="nooglo_three.png" alt="Seasonal Throw Pillows">
                     </div>
                     <div class="product-details">
                         <h3>Seasonal Throw Pillows</h3>
                         <p>Refresh your space with our seasonal collection, bringing warmth and charm to match any time of year.</p>
+                        <a href="#" class="btn btn-secondary">Shop Now</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="nooglo_four.png" alt="Custom Wall Art">
+                    </div>
+                    <div class="product-details">
+                        <h3>Custom Wall Art</h3>
+                        <p>Make a statement with our custom wall art pieces, designed to complement your unique style and home decor.</p>
+                        <a href="#" class="btn btn-secondary">Shop Now</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="nooglo_five.png" alt="Decorative Throw Blankets">
+                    </div>
+                    <div class="product-details">
+                        <h3>Decorative Throw Blankets</h3>
+                        <p>Add warmth and texture to any room with our handcrafted throw blankets, perfect for cozy nights at home.</p>
+                        <a href="#" class="btn btn-secondary">Shop Now</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="nooglo_six.png" alt="Table Centerpieces">
+                    </div>
+                    <div class="product-details">
+                        <h3>Table Centerpieces</h3>
+                        <p>Elevate your dining experience with our elegant table centerpieces that bring a touch of sophistication to any gathering.</p>
                         <a href="#" class="btn btn-secondary">Shop Now</a>
                     </div>
                 </div>
@@ -635,8 +656,7 @@
         <div class="container">
             <div class="story-content">
                 <div class="story-image">
-                    <!-- Replace with the kitchen image -->
-                    <img src="your-kitchen-image.jpg" alt="Rustic Kitchen Design">
+                    <img src="nooglo_two.png" alt="NOOGLO Products">
                 </div>
                 <div class="story-text">
                     <h2>From Passion to Purpose: My Journey in Crafting Beauty</h2>
@@ -662,11 +682,11 @@
                 <div class="contact-info">
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <p>hello@sutherlanddesigns.com</p>
+                        <p>nooglo11@gmail.com</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
-                        <p>(555) 123-4567</p>
+                        <p>(850) 980-5574</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -701,8 +721,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h2>SUTHERLAND</h2>
-                    <p>Handcrafted with love since 2018</p>
+                    <h2>NOOGLO</h2>
+                    <p>Crafted with love since 2025</p>
                 </div>
                 <div class="footer-links">
                     <h3>Quick Links</h3>
@@ -723,7 +743,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Sutherland Designs. All rights reserved.</p>
+                <p>&copy; 2025 NoogloGift and Decor Designs. All rights reserved.</p>
             </div>
         </div>
     </footer>
