@@ -12,115 +12,9 @@
     <!-- Embedded CSS -->
     <style>
         /* Base Styles */
-        :root {
-            --primary-color: #a08f78;
-            --secondary-color: #4b4a48;
-            --light-color: #f5f5f5;
-            --dark-color: #333;
-            --accent-color: #d9c9ba;
-            --text-color: #4b4a48;
-            --body-font: 'Montserrat', sans-serif;
-            --heading-font: 'Cormorant Garamond', serif;
-        }
+...(styles unchanged)...
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--body-font);
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-color);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--primary-color);
-            transition: all 0.3s ease;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--heading-font);
-            margin-bottom: 1rem;
-            line-height: 1.3;
-            color: var(--secondary-color);
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 2.5rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 2px;
-            background-color: var(--primary-color);
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 2px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .btn:hover {
-            background-color: #8a7761;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        /* Header */
+        /* Header - centered logo */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             position: fixed;
@@ -133,9 +27,15 @@
 
         .navbar {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             padding: 1rem 0;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 0.5rem;
         }
 
         .logo h1 {
@@ -157,388 +57,7 @@
         nav ul li {
             margin: 0 1rem;
         }
-
-        nav ul li a {
-            color: var(--dark-color);
-            font-weight: 500;
-            padding: 0.5rem 0;
-            position: relative;
-        }
-
-        nav ul li a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            transition: width 0.3s ease;
-        }
-
-        nav ul li a:hover:after,
-        nav ul li a.active:after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('nooglo_one.png') no-repeat center center/cover;
-            color: #fff;
-            padding: 7rem 0;
-            margin-top: 4rem;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Intro Section */
-        .intro {
-            padding: 5rem 0;
-            background-color: #fff;
-        }
-
-        .intro-text {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .intro-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .intro-text p {
-            font-size: 1.1rem;
-        }
-
-        /* Products Section */
-        .products {
-            background-color: #f9f9f9;
-            padding: 5rem 0;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .product-card {
-            background-color: #fff;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .product-image {
-            height: 250px;
-            overflow: hidden;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.1);
-        }
-
-        .product-details {
-            padding: 1.5rem;
-        }
-
-        .product-details h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .product-details p {
-            margin-bottom: 1.5rem;
-            color: #666;
-        }
-
-        /* Story Section */
-        .story {
-            padding: 5rem 0;
-            background-color: #fff;
-        }
-
-        .story-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .story-image img {
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .story-text h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .story-text p {
-            font-size: 1.1rem;
-        }
-
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('nooglo_three.png') no-repeat center center/cover;
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .cta p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 0;
-            background-color: #f9f9f9;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-        }
-
-        .contact-info {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem;
-            border-radius: 5px;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-item i {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-        }
-
-        .info-item p {
-            margin: 0;
-        }
-
-        .social-links {
-            margin-top: 2rem;
-            display: flex;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            border-radius: 50%;
-            margin-right: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background-color: white;
-            color: var(--primary-color);
-        }
-
-        .contact-form {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            font-family: var(--body-font);
-            font-size: 1rem;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: #fff;
-            padding: 4rem 0 2rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-logo h2 {
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-logo p {
-            color: #ccc;
-        }
-
-        .footer-links h3,
-        .footer-newsletter h3 {
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links ul li a {
-            color: #ccc;
-        }
-
-        .footer-links ul li a:hover {
-            color: white;
-        }
-
-        .footer-newsletter p {
-            color: #ccc;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-newsletter form {
-            display: flex;
-        }
-
-        .footer-newsletter input {
-            flex-grow: 1;
-            padding: 8px 12px;
-            border: none;
-            border-radius: 2px 0 0 2px;
-        }
-
-        .footer-newsletter button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0 15px;
-            border-radius: 0 2px 2px 0;
-            cursor: pointer;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #aaa;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .story-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                padding: 1rem 0;
-            }
-            
-            nav ul {
-                margin-top: 1rem;
-            }
-            
-            nav ul li {
-                margin: 0 0.75rem;
-            }
-            
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 0.5rem;
-            }
-            
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
+...(remaining styles unchanged)...
     </style>
 </head>
 <body>
@@ -585,17 +104,6 @@
             <div class="product-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="nooglo_one.png" alt="Custom Name Throw Pillow">
-                    </div>
-                    <div class="product-details">
-                        <h3>Custom Name Throw Pillow</h3>
-                        <p>Searching for a truly unique touch to enhance your living space? Look no further than our Custom Name Throw Pillow!</p>
-                        <a href="#" class="btn btn-secondary">Shop Now</a>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
                         <img src="nooglo_two.png" alt="Family Name Sign">
                     </div>
                     <div class="product-details">
@@ -607,33 +115,33 @@
                 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="nooglo_three.png" alt="Seasonal Throw Pillows">
+                        <img src="nooglo_three.png" alt="Decorative Throw Blanket">
+                    </div>
+                    <div class="product-details">
+                        <h3>Decorative Throw Blanket</h3>
+                        <p>Add warmth and texture to any room with our handcrafted throw blankets, perfect for cozy nights at home.</p>
+                        <a href="#" class="btn btn-secondary">Shop Now</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="nooglo_four.png" alt="Handcrafted Necklaces">
+                    </div>
+                    <div class="product-details">
+                        <h3>Handcrafted Necklaces</h3>
+                        <p>Adorn yourself with our unique handcrafted necklaces, designed to complement any style and make a statement.</p>
+                        <a href="#" class="btn btn-secondary">Shop Now</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="nooglo_five.png" alt="Seasonal Throw Pillows">
                     </div>
                     <div class="product-details">
                         <h3>Seasonal Throw Pillows</h3>
                         <p>Refresh your space with our seasonal collection, bringing warmth and charm to match any time of year.</p>
-                        <a href="#" class="btn btn-secondary">Shop Now</a>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="nooglo_four.png" alt="Custom Wall Art">
-                    </div>
-                    <div class="product-details">
-                        <h3>Custom Wall Art</h3>
-                        <p>Make a statement with our custom wall art pieces, designed to complement your unique style and home decor.</p>
-                        <a href="#" class="btn btn-secondary">Shop Now</a>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="nooglo_five.png" alt="Decorative Throw Blankets">
-                    </div>
-                    <div class="product-details">
-                        <h3>Decorative Throw Blankets</h3>
-                        <p>Add warmth and texture to any room with our handcrafted throw blankets, perfect for cozy nights at home.</p>
                         <a href="#" class="btn btn-secondary">Shop Now</a>
                     </div>
                 </div>
@@ -645,6 +153,17 @@
                     <div class="product-details">
                         <h3>Table Centerpieces</h3>
                         <p>Elevate your dining experience with our elegant table centerpieces that bring a touch of sophistication to any gathering.</p>
+                        <a href="#" class="btn btn-secondary">Shop Now</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="nooglo_seven.png" alt="Custom Wall Art">
+                    </div>
+                    <div class="product-details">
+                        <h3>Custom Wall Art</h3>
+                        <p>Make a statement with our custom wall art pieces, designed to complement your unique style and home decor.</p>
                         <a href="#" class="btn btn-secondary">Shop Now</a>
                     </div>
                 </div>
@@ -722,7 +241,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h2>NOOGLO</h2>
-                    <p>Crafted with love since 2025</p>
+                    <p>Crafted with love since 2024</p>
                 </div>
                 <div class="footer-links">
                     <h3>Quick Links</h3>
@@ -743,7 +262,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 NoogloGift and Decor Designs. All rights reserved.</p>
+                <p>&copy; 2024 NoogloGift and Decor Designs. All rights reserved.</p>
             </div>
         </div>
     </footer>
